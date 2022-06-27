@@ -1,9 +1,13 @@
 <h3><strong>Inventario de vacunaci&oacute;n - Docker Compose</strong></h3>
-<p><span>Esta gu&iacute;a lo gu&iacute;a a trav&eacute;s del proceso de creaci&oacute;n de una imagen de Docker</span><span> para ejecutar la aplicaci&oacute;n de inventario de vacunaci&oacute;n. </span><span>Esta es una gu&iacute;a de "inicio", por lo que el alcance se limita a unas pocas necesidades b&aacute;sicas.</span></p>
+<p>En la imagen siguiente se ilustra el DER utilizado para resolver el ejercicio planteado.</p>
+<p><img src="https://raw.githubusercontent.com/miriamjaramillo/inventario_vacunacion/main/DER.PNG" alt="" width="482" height="356" /></p>
+<p>&nbsp;</p>
+<p>Esta gu&iacute;a lo gu&iacute;a a trav&eacute;s del proceso de creaci&oacute;n de una imagen de Docker para ejecutar la aplicaci&oacute;n de inventario de vacunaci&oacute;n. Esta es una gu&iacute;a de "inicio", por lo que el alcance se limita a unas pocas necesidades b&aacute;sicas.</p>
 <p><strong>Contiene</strong></p>
 <ul>
 <li>Spring Boot</li>
-<li>Maven</li>
+<li>Spring Data JPA e Hibernate</li>
+<li>API REST</li>
 <li>Spring Cloud Feign</li>
 <li>PostgreSQL</li>
 <li>Documentaci&oacute;n API REST con Swagger</li>
@@ -11,7 +15,6 @@
 <p><strong>Requisitos previos GIT en el servidor - Generar la clave p&uacute;blica </strong></p>
 <p>Para generar la clave p&uacute;blica se sugiere seguir las instrucciones del siguiente tutorial:<br /><a href="https://git-scm.com/book/es/v2/Git-en-el-Servidor-Generando-tu-clave-p%C3%BAblica-SSH ">https://git-scm.com/book/es/v2/Git-en-el-Servidor-Generando-tu-clave-p%C3%BAblica-SSH </a></p>
 <p>Para m&aacute;s detalles de c&oacute;mo crear claves SSH, consultar la gu&iacute;a correspondiente de GitLab<br /><a href="https://docs.gitlab.com/ee/ssh/index.html ">https://docs.gitlab.com/ee/ssh/index.html </a></p>
-<p>&nbsp;</p>
 <p>A continuaci&oacute;n, las opciones de instalaci&oacute;n de Docker y Docker Compose, dependiendo del sistema operativo.</p>
 <p><strong>Sistemas Operativos basados en WINDOWS</strong></p>
 <p>Instalar Docker Desktop<br /><a href="https://docs.docker.com/desktop/windows/install/ ">https://docs.docker.com/desktop/windows/install/ </a></p>
