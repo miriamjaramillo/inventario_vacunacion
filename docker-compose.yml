@@ -1,0 +1,53 @@
+version: '3.1'
+services:
+
+ microservicio-administrador:
+  container_name: administrador-producto-mjaramillo
+  image: administrador-mjaramillo
+  build:
+   context: .
+   dockerfile: docker_file/administrador.dockerfile
+  environment:
+   - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/inventario
+  ports:
+   - "8001:8001"
+  depends_on:
+   - db
+   
+ micorservicio-empleado:
+  container_name: empleado-producto-mjaramillo
+  image: empleado-mjaramillo
+  build:
+   context: .
+   dockerfile: docker_file/empleado.dockerfile
+  environment:
+   - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/inventario
+  ports:
+   - "8002:8002"
+  depends_on:
+   - db
+   
+ microservicio-inventario:
+  container_name: inventario-producto-mjaramillo
+  image: inventario-mjaramillo
+  build:
+   context: .
+   dockerfile: docker_file/inventario.dockerfile
+  environment:
+   - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/inventario
+  ports:
+   - "8003:8003"
+  depends_on:
+   - db
+
+ #PostreSQL Service
+ db:
+  container_name: db
+  image: postgres
+  ports:
+   - "5432:5432"
+  environment:
+   - POSTGRES_PASSWORD=mjaramillo
+   - POSTGRES_USER=postgres
+   - POSTGRES_DB=inventario
+

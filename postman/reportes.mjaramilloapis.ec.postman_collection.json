@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "06d1dedf-7058-4a78-9cf8-95e73f4f059a",
+		"name": "reportes.mjaramilloapis.ec",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13171929"
+	},
+	"item": [
+		{
+			"name": "listarEmpleadosVacunados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8003/empleado_vacuna/empleadosVacunados",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"empleado_vacuna",
+						"empleadosVacunados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarEmpleadosNoVacunados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8003/empleado_vacuna/empleadosNoVacunados",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"empleado_vacuna",
+						"empleadosNoVacunados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarEmpleadosVacunadosPorFecha",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8003/empleado_vacuna/empleadosPorFecha/2020-01-01/2023-01-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"empleado_vacuna",
+						"empleadosPorFecha",
+						"2020-01-01",
+						"2023-01-01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarEmpleadosPorTipoVacuna",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8003/empleado_vacuna/empleadosPorTipoVacuna/Sputnik",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"empleado_vacuna",
+						"empleadosPorTipoVacuna",
+						"Sputnik"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

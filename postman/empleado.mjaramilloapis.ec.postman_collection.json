@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "c47fc394-90d0-4840-bfe0-7b8f23a69617",
+		"name": "empleado.mjaramilloapis.ec",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13171929"
+	},
+	"item": [
+		{
+			"name": "crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"apellidos\": \"Morocho Japon\",\r\n  \"cedula\": \"349234569\",\r\n  \"contrasena\": \"1234\",\r\n  \"correoElectronico\": \"andres@gmail.com\",\r\n  \"direccion\": \"Saraguro\",\r\n  \"fechaNacimiento\": \"1984-06-26T23:07:45.799Z\",\r\n  \"nombres\": \"Andres Mario\",\r\n  \"telefono\": \"0234568123\",\r\n  \"usuario\": \"amorocho\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8002/empleado/crear/0123456781",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"empleado",
+						"crear",
+						"0123456781"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"apellidos\": \"Morocho Guaman\",\r\n  \"contrasena\": \"3456\",\r\n  \"correoElectronico\": \"andres@gmail.com\",\r\n  \"direccion\": \"Saraguro\",\r\n  \"fechaNacimiento\": \"1984-06-26T23:20:22.448Z\",\r\n  \"fechaRegistro\": \"2022-06-26T23:20:22.448Z\",\r\n  \"nombres\": \"Andres Mario\",\r\n  \"telefono\": \"0342345678\",\r\n  \"usuario\": \"andresm\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8002/empleado/editar/349234567",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"empleado",
+						"editar",
+						"349234567"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8002/empleado/obtener/349234567",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"empleado",
+						"obtener",
+						"349234567"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8002/empleado/eliminar/349234567",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"empleado",
+						"eliminar",
+						"349234567"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

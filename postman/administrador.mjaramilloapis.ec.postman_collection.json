@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "88df7ea0-2570-424d-aaf6-2fe24913d9d7",
+		"name": "administrador.mjaramilloapis.ec",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13171929"
+	},
+	"item": [
+		{
+			"name": "crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"apellidos\": \"Alvarado Espinosa\",\r\n  \"cedula\": \"0123456781\",\r\n  \"contrasena\": \"1234\",\r\n  \"nombres\": \"Juana Estefania\",\r\n  \"usuario\": \"jalvarado\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/administrador/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"administrador",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

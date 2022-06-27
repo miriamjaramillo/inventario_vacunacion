@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "6c216460-00fb-43c7-bf0e-07c29dd294b3",
+		"name": "vacuna.mjaramilloapis.ec",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13171929"
+	},
+	"item": [
+		{
+			"name": "crearSputnik",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"descripcion\": \"La vacuna rusa Sputnik V utiliza dos dosis\",\r\n  \"tipo\": \"Sputnik\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8003/vacuna/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"vacuna",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crearAstraZeneca",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"descripcion\": \" La vacuna de AstraZeneca es segura y eficaz para proteger a las personas de los riesgos sumamente graves\",\r\n  \"tipo\": \"AstraZeneca\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8003/vacuna/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"vacuna",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crearAstraPfizer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"descripcion\": \"La vacuna de ARNm contra la COVID-19 (Pfizer-BioNTech; Comirnaty) está aprobada por la FDA como una serie primaria (dos dosis)\",\r\n  \"tipo\": \"Pfizer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8003/vacuna/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"vacuna",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crearJhonson&Jhonson",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"descripcion\": \"La vacuna contra el COVID-19 de J&J/Janssen contiene un fragmento de virus modificado que no es el virus que causa el COVID-19\",\r\n  \"tipo\": \"Jhonson&Jhonson\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8003/vacuna/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"vacuna",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8003/vacuna/eliminar/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"vacuna",
+						"eliminar",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerPorId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8003/vacuna/obtener/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"vacuna",
+						"obtener",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

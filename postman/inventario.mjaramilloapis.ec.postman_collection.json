@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "5231d11e-2221-4028-85d1-d9af1955dbf0",
+		"name": "inventario.mjaramilloapis.ec",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13171929"
+	},
+	"item": [
+		{
+			"name": "registrarVacuna",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fechaVacunacion\": \"2020-06-27T02:53:45.784Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8003/empleado_vacuna/crear/349234568/3/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"empleado_vacuna",
+						"crear",
+						"349234568",
+						"3",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
