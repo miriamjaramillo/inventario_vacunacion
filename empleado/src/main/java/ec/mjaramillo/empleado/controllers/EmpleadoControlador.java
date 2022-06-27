@@ -3,6 +3,11 @@ package ec.mjaramillo.empleado.controllers;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -54,5 +59,14 @@ public class EmpleadoControlador {
 		Map<String, Boolean> response = new HashMap<>();
 		response.put("Estado eliminacion: ", Boolean.TRUE);
 		return response;
+	}
+	
+	@ApiOperation(value = "Dar de alta un empleado", notes = "Dar de alta un empleado", tags = { "Empleado" })
+	@PutMapping("/darAlta/{usuario}/{contrasena}/{cedulaEmpleado}")
+	public ResponseEntity<?> darAlta(@PathVariable(value = "usuario") @NotBlank @Size(min = 7, message = "El usuario no puede contener menos de 7 caracteres") String usuario,
+			@PathVariable(value = "contrasena") String contrasena,
+			@PathVariable(value = "cedulaEmpleado") String cedulaEmpleado, @RequestBody Empleado empleadoRequest){
+		Empleado empleado = empleadoService.darAlta(usuario, contrasena, cedulaEmpleado);
+		return ResponseEntity.ok(empleado);
 	}
 }

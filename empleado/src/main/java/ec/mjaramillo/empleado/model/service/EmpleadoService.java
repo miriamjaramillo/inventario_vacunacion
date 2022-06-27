@@ -11,5 +11,6 @@ public interface EmpleadoService {
 	public Empleado editar(String cedula, Empleado empleado);
 	public Empleado obtenerPorIdentificacion(String cedula);
 	public Empleado eliminar(String cedula);
+	public Empleado darAlta(String usuario, String contrasena, String cedulaEmpleado);
 	public List<Empleado> listar();
 }

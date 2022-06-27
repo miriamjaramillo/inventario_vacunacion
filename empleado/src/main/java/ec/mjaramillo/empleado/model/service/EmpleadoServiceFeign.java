@@ -85,6 +85,23 @@ public class EmpleadoServiceFeign implements EmpleadoService {
 	public List<Empleado> listar() {
 		return empleadoRepository.findAll();
 	}
+
+	@Override
+	public Empleado darAlta(String usuario, String contrasena, String cedulaEmpleado) {
+		
+		Empleado existeEmpleado = obtenerPorIdentificacion(cedulaEmpleado);
+		
+		if (null == existeEmpleado) {
+			throw new ResourceNotFoundException("La cedula del empleado a modificar no existe.");
+		}else {
+			if (!usuario.isEmpty() && usuario != null) {existeEmpleado.setUsuario(usuario);};
+			if (!contrasena.isEmpty() && contrasena != null ) {existeEmpleado.setContrasena(contrasena);};
+			
+			empleadoRepository.save(existeEmpleado);
+		}
+		
+		return existeEmpleado;
+	}
 	
 }
 
